@@ -65,26 +65,17 @@
 </template>
 
 <script lang="ts">
-// import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
-// @Component
-// export default class HelloWorld extends Vue {
-//   @Prop() msg!: string;
+@Component
+export default class HelloWorld extends Vue {
+  @Prop() msg!: string;
 
-//   created(): void {
-//     console.log(this.$ability);
-//     console.log(this.$can('read', 'Article'));
-//   }
-// }
-
-import Vue from 'vue';
-
-export default Vue.extend({
-  props: ['msg'],
-  created() {
+  created(): void {
+    console.log(this.$ability);
     console.log(this.$can('read', 'Article'));
-  },
-});
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

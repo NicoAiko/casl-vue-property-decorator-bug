@@ -6,20 +6,16 @@
 </template>
 
 <script lang="ts">
-// import { Component, Vue } from 'vue-property-decorator';
 import Vue from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
 
 export default Vue.extend({
   name: 'App',
   components: { HelloWorld },
+  created() {
+    console.log(this.$can('list', 'Article'));
+  },
 });
-// @Component({
-//   components: {
-//     HelloWorld,
-//   },
-// })
-// export default class App extends Vue {}
 </script>
 
 <style>
